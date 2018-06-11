@@ -4,7 +4,7 @@
 
 * Library Information
   - Name :: SoundTransmitter
-  - Version :: 2.0.5
+  - Version :: 1.0.0
   - License :: BSD
   - URL :: https://github.com/janelia-arduino/SoundTransmitter
   - Author :: Peter Polidoro
@@ -12,73 +12,11 @@
 
 ** Description
 
-   Modular device audio controller library.
+   Modular device sound transmitter library.
 
 * API NAMES
 
   #+BEGIN_SRC js
-    {
-      "id": "getApi",
-      "result": {
-        "firmware": [
-          "SoundTransmitter"
-        ],
-        "verbosity": "NAMES",
-        "functions": [
-          "getAudioMemoryUsage",
-          "getAudioMemoryUsageMax",
-          "resetAudioMemoryUsageMax",
-          "getAudioProcessorUsage",
-          "getAudioProcessorUsageMax",
-          "resetAudioProcessorUsageMax",
-          "getSDCardInfo",
-          "getAudioPaths",
-          "playPath",
-          "playTone",
-          "playToneAt",
-          "playNoise",
-          "playNoiseAt",
-          "playFilteredNoise",
-          "playFilteredNoiseAt",
-          "stop",
-          "isPlaying",
-          "getLastAudioPathPlayed",
-          "getPosition",
-          "getLength",
-          "getPercentComplete",
-          "addTonePwm",
-          "addTonePwmAt",
-          "startTonePwm",
-          "startTonePwmAt",
-          "addNoisePwm",
-          "addNoisePwmAt",
-          "startNoisePwm",
-          "startNoisePwmAt",
-          "addFilteredNoisePwm",
-          "addFilteredNoisePwmAt",
-          "startFilteredNoisePwm",
-          "startFilteredNoisePwmAt",
-          "stopPwm",
-          "stopAllPwm",
-          "isPulsing"
-        ],
-        "parameters": [
-          "audio_path",
-          "frequency",
-          "speaker",
-          "delay",
-          "period",
-          "on_duration",
-          "count",
-          "pwm_index",
-          "volume",
-          "bandwidth"
-        ],
-        "properties": [
-          "volume"
-        ]
-      }
-    }
   #+END_SRC
 
 * API GENERAL
