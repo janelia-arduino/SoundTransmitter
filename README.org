@@ -17,6 +17,33 @@
 * API NAMES
 
   #+BEGIN_SRC js
+    {
+      "id": "getApi",
+      "result": {
+        "firmware": [
+          "SoundTransmitter"
+        ],
+        "verbosity": "NAMES",
+        "functions": [
+          "playTone",
+          "playNoise",
+          "stop",
+          "isPlaying"
+        ],
+        "parameters": [
+          "frequency",
+          "volume"
+        ],
+        "properties": [
+          "triggerToneFrequency",
+          "triggerToneVolume",
+          "triggerToneDuration"
+        ],
+        "callbacks": [
+          "triggerTone"
+        ]
+      }
+    }
   #+END_SRC
 
 * API GENERAL

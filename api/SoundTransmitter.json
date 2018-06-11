@@ -1,0 +1,200 @@
+{
+  "id": "getApi",
+  "result": {
+    "firmware": [
+      "SoundTransmitter"
+    ],
+    "verbosity": "GENERAL",
+    "functions": [
+      {
+        "name": "playTone",
+        "parameters": [
+          "frequency",
+          "volume"
+        ]
+      },
+      {
+        "name": "playNoise",
+        "parameters": [
+          "volume"
+        ]
+      },
+      {
+        "name": "stop"
+      },
+      {
+        "name": "isPlaying",
+        "result_info": {
+          "type": "bool"
+        }
+      }
+    ],
+    "parameters": [
+      {
+        "name": "frequency",
+        "type": "long"
+      },
+      {
+        "name": "volume",
+        "type": "long"
+      }
+    ],
+    "properties": [
+      {
+        "name": "triggerToneFrequency",
+        "type": "long",
+        "functions": [
+          {
+            "name": "getValue",
+            "result_info": {
+              "type": "long"
+            }
+          },
+          {
+            "name": "setValue",
+            "parameters": [
+              "value"
+            ],
+            "result_info": {
+              "type": "long"
+            }
+          },
+          {
+            "name": "getDefaultValue",
+            "result_info": {
+              "type": "long"
+            }
+          },
+          {
+            "name": "setValueToDefault",
+            "result_info": {
+              "type": "long"
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "value",
+            "type": "long"
+          }
+        ]
+      },
+      {
+        "name": "triggerToneVolume",
+        "type": "long",
+        "functions": [
+          {
+            "name": "getValue",
+            "result_info": {
+              "type": "long"
+            }
+          },
+          {
+            "name": "setValue",
+            "parameters": [
+              "value"
+            ],
+            "result_info": {
+              "type": "long"
+            }
+          },
+          {
+            "name": "getDefaultValue",
+            "result_info": {
+              "type": "long"
+            }
+          },
+          {
+            "name": "setValueToDefault",
+            "result_info": {
+              "type": "long"
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "value",
+            "type": "long"
+          }
+        ]
+      },
+      {
+        "name": "triggerToneDuration",
+        "type": "long",
+        "functions": [
+          {
+            "name": "getValue",
+            "result_info": {
+              "type": "long"
+            }
+          },
+          {
+            "name": "setValue",
+            "parameters": [
+              "value"
+            ],
+            "result_info": {
+              "type": "long"
+            }
+          },
+          {
+            "name": "getDefaultValue",
+            "result_info": {
+              "type": "long"
+            }
+          },
+          {
+            "name": "setValueToDefault",
+            "result_info": {
+              "type": "long"
+            }
+          }
+        ],
+        "parameters": [
+          {
+            "name": "value",
+            "type": "long"
+          }
+        ]
+      }
+    ],
+    "callbacks": [
+      {
+        "name": "triggerTone",
+        "properties": [
+          "triggerToneFrequency",
+          "triggerToneVolume",
+          "triggerToneDuration"
+        ],
+        "functions": [
+          {
+            "name": "trigger"
+          },
+          {
+            "name": "attachTo",
+            "parameters": [
+              "pin_name",
+              "pin_mode"
+            ]
+          },
+          {
+            "name": "detachFrom",
+            "parameters": [
+              "pin_name"
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "name": "pin_name",
+            "type": "string"
+          },
+          {
+            "name": "pin_mode",
+            "type": "string"
+          }
+        ]
+      }
+    ]
+  }
+}
