@@ -1,0 +1,108 @@
+#+TITLE: SoundTransmitter
+#+AUTHOR: Peter Polidoro
+#+EMAIL: peterpolidoro@gmail.com
+
+* Library Information
+  - Name :: SoundTransmitter
+  - Version :: 2.0.5
+  - License :: BSD
+  - URL :: https://github.com/janelia-arduino/SoundTransmitter
+  - Author :: Peter Polidoro
+  - Email :: peterpolidoro@gmail.com
+
+** Description
+
+   Modular device audio controller library.
+
+* API NAMES
+
+  #+BEGIN_SRC js
+    {
+      "id": "getApi",
+      "result": {
+        "firmware": [
+          "SoundTransmitter"
+        ],
+        "verbosity": "NAMES",
+        "functions": [
+          "getAudioMemoryUsage",
+          "getAudioMemoryUsageMax",
+          "resetAudioMemoryUsageMax",
+          "getAudioProcessorUsage",
+          "getAudioProcessorUsageMax",
+          "resetAudioProcessorUsageMax",
+          "getSDCardInfo",
+          "getAudioPaths",
+          "playPath",
+          "playTone",
+          "playToneAt",
+          "playNoise",
+          "playNoiseAt",
+          "playFilteredNoise",
+          "playFilteredNoiseAt",
+          "stop",
+          "isPlaying",
+          "getLastAudioPathPlayed",
+          "getPosition",
+          "getLength",
+          "getPercentComplete",
+          "addTonePwm",
+          "addTonePwmAt",
+          "startTonePwm",
+          "startTonePwmAt",
+          "addNoisePwm",
+          "addNoisePwmAt",
+          "startNoisePwm",
+          "startNoisePwmAt",
+          "addFilteredNoisePwm",
+          "addFilteredNoisePwmAt",
+          "startFilteredNoisePwm",
+          "startFilteredNoisePwmAt",
+          "stopPwm",
+          "stopAllPwm",
+          "isPulsing"
+        ],
+        "parameters": [
+          "audio_path",
+          "frequency",
+          "speaker",
+          "delay",
+          "period",
+          "on_duration",
+          "count",
+          "pwm_index",
+          "volume",
+          "bandwidth"
+        ],
+        "properties": [
+          "volume"
+        ]
+      }
+    }
+  #+END_SRC
+
+* API GENERAL
+
+  [[./api/]]
+
+* Ancestors
+
+  [[https://github.com/janelia-arduino/ModularServer]]
+
+  [[https://github.com/janelia-arduino/ModularDeviceBase]]
+
+* Clients
+
+* Devices
+
+  [[https://github.com/janelia-modular-devices/modular_device_base.git]]
+
+  [[https://github.com/janelia-modular-devices/sound_transmitter.git]]
+
+* More Detailed Modular Device Information
+
+  [[https://github.com/janelia-modular-devices/modular-devices]]
+
+* Installation Instructions
+
+  [[https://github.com/janelia-arduino/arduino-libraries]]
