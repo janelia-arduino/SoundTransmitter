@@ -60,9 +60,9 @@
 
 * Devices
 
-  [[https://github.com/janelia-modular-devices/modular_device_base.git]]
+  [[https://github.com/janelia-modular-devices/modular_device_base]]
 
-  [[https://github.com/janelia-modular-devices/sound_transmitter.git]]
+  [[https://github.com/janelia-modular-devices/sound_transmitter]]
 
 * More Detailed Modular Device Information
 
