@@ -31,19 +31,19 @@ public:
   SoundTransmitter();
   virtual void setup();
 
-  void playTone(const size_t frequency,
-    const long volume);
-  void playNoise(const long volume);
+  void playTone(size_t frequency,
+    long volume);
+  void playNoise(long volume);
   void stop();
   bool isPlaying();
 
   bool codecEnabled();
-  int addTonePwm(const size_t frequency,
-    const long volume,
-    const long delay,
-    const long period,
-    const long on_duration,
-    const long count);
+  int addTonePwm(size_t frequency,
+    long volume,
+    long delay,
+    long period,
+    long on_duration,
+    long count);
 
   // Handlers
   virtual void startPwmHandler(int index);
@@ -69,7 +69,7 @@ private:
 
   void enableAudioCodec();
   void updatePlaying();
-  void setVolume(const long volume);
+  void setVolume(long volume);
 
   // Handlers
   void playToneHandler();

@@ -148,8 +148,8 @@ void SoundTransmitter::setup()
 
 }
 
-void SoundTransmitter::playTone(const size_t frequency,
-  const long volume)
+void SoundTransmitter::playTone(size_t frequency,
+  long volume)
 {
   stop();
   if ((volume <= 0) || (frequency < constants::frequency_stop_threshold))
@@ -167,7 +167,7 @@ void SoundTransmitter::playTone(const size_t frequency,
   playing_ = true;
 }
 
-void SoundTransmitter::playNoise(const long volume)
+void SoundTransmitter::playNoise(long volume)
 {
   stop();
   if (volume <= 0)
@@ -212,12 +212,12 @@ bool SoundTransmitter::codecEnabled()
   return codec_enabled_;
 }
 
-int SoundTransmitter::addTonePwm(const size_t frequency,
-  const long volume,
-  const long delay,
-  const long period,
-  const long on_duration,
-  const long count)
+int SoundTransmitter::addTonePwm(size_t frequency,
+  long volume,
+  long delay,
+  long period,
+  long on_duration,
+  long count)
 {
   if (indexed_pulses_.full())
   {
@@ -243,8 +243,8 @@ int SoundTransmitter::addTonePwm(const size_t frequency,
 
 void SoundTransmitter::enableAudioCodec()
 {
-  pinMode(SDA, INPUT);
-  pinMode(SCL, INPUT);
+  pinMode(SDA,INPUT);
+  pinMode(SCL,INPUT);
   if (digitalRead(SDA) && digitalRead(SCL))
   {
     // This may wait forever if the SDA & SCL pins lack
@@ -272,7 +272,7 @@ void SoundTransmitter::updatePlaying()
   }
 }
 
-void SoundTransmitter::setVolume(const long volume)
+void SoundTransmitter::setVolume(long volume)
 {
   double stereo_speaker_gain = 1.0;
 
