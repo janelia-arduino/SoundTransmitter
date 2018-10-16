@@ -32,18 +32,18 @@ public:
   virtual void setup();
 
   void playTone(const size_t frequency,
-                const long volume);
+    const long volume);
   void playNoise(const long volume);
   void stop();
   bool isPlaying();
 
   bool codecEnabled();
   int addTonePwm(const size_t frequency,
-                 const long volume,
-                 const long delay,
-                 const long period,
-                 const long on_duration,
-                 const long count);
+    const long volume,
+    const long delay,
+    const long period,
+    const long on_duration,
+    const long count);
 
   // Handlers
   virtual void startPwmHandler(int index);
@@ -60,7 +60,7 @@ private:
   EventController<sound_transmitter::constants::EVENT_COUNT_MAX> event_controller_;
 
   IndexedContainer<sound_transmitter::constants::PulseInfo,
-                   sound_transmitter::constants::INDEXED_PULSES_COUNT_MAX> indexed_pulses_;
+    sound_transmitter::constants::INDEXED_PULSES_COUNT_MAX> indexed_pulses_;
 
   bool codec_enabled_;
   sound_transmitter::constants::audio_t audio_type_playing_;

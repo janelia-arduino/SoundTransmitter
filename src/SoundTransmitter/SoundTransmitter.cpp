@@ -82,7 +82,7 @@ void SoundTransmitter::setup()
 
   // Add Hardware
   modular_server_.addHardware(constants::hardware_info,
-                              pins_);
+    pins_);
 
   // Pins
   modular_server::Pin & bnc_a_pin = modular_server_.pin(modular_device_base::constants::bnc_a_pin_name);
@@ -92,10 +92,10 @@ void SoundTransmitter::setup()
 
   // Add Firmware
   modular_server_.addFirmware(constants::firmware_info,
-                              properties_,
-                              parameters_,
-                              functions_,
-                              callbacks_);
+    properties_,
+    parameters_,
+    functions_,
+    callbacks_);
 
   // Properties
   modular_server::Property & trigger_tone_frequency_property = modular_server_.createProperty(constants::trigger_tone_frequency_property_name,constants::frequency_default);
@@ -149,7 +149,7 @@ void SoundTransmitter::setup()
 }
 
 void SoundTransmitter::playTone(const size_t frequency,
-                                const long volume)
+  const long volume)
 {
   stop();
   if ((volume <= 0) || (frequency < constants::frequency_stop_threshold))
@@ -213,11 +213,11 @@ bool SoundTransmitter::codecEnabled()
 }
 
 int SoundTransmitter::addTonePwm(const size_t frequency,
-                                 const long volume,
-                                 const long delay,
-                                 const long period,
-                                 const long on_duration,
-                                 const long count)
+  const long volume,
+  const long delay,
+  const long period,
+  const long on_duration,
+  const long count)
 {
   if (indexed_pulses_.full())
   {
@@ -228,12 +228,12 @@ int SoundTransmitter::addTonePwm(const size_t frequency,
   pulse_info.volume = volume;
   int index = indexed_pulses_.add(pulse_info);
   EventIdPair event_id_pair = event_controller_.addPwmUsingDelay(makeFunctor((Functor1<int> *)0,*this,&SoundTransmitter::playToneHandler),
-                                                                 makeFunctor((Functor1<int> *)0,*this,&SoundTransmitter::stopHandler),
-                                                                 delay,
-                                                                 period,
-                                                                 on_duration,
-                                                                 count,
-                                                                 index);
+    makeFunctor((Functor1<int> *)0,*this,&SoundTransmitter::stopHandler),
+    delay,
+    period,
+    on_duration,
+    count,
+    index);
   event_controller_.addStartFunctor(event_id_pair,makeFunctor((Functor1<int> *)0,*this,&SoundTransmitter::startPwmHandler));
   event_controller_.addStopFunctor(event_id_pair,makeFunctor((Functor1<int> *)0,*this,&SoundTransmitter::stopPwmHandler));
   indexed_pulses_[index].event_id_pair = event_id_pair;
@@ -366,11 +366,11 @@ void SoundTransmitter::triggerToneHandler(modular_server::Pin * pin_ptr)
   long trigger_tone_duration;
   modular_server_.property(constants::trigger_tone_duration_property_name).getValue(trigger_tone_duration);
   addTonePwm(trigger_tone_frequency,
-             trigger_tone_volume,
-             0,
-             trigger_tone_duration*2,
-             trigger_tone_duration,
-             1);
+    trigger_tone_volume,
+    0,
+    trigger_tone_duration*2,
+    trigger_tone_duration,
+    1);
 }
 
 void SoundTransmitter::playToneHandler(int index)
